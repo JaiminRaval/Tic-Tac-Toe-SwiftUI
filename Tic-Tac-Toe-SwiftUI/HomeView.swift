@@ -9,13 +9,26 @@ import SwiftUI
 
 struct HomeView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
+        ZStack(alignment: .center) {
+            VStack {
+                HStack {
+                    Image(systemName: "x.circle")
+                    Image(systemName: "x.circle")
+                    Image(systemName: "x.circle")
+                }
+                HStack {
+                    Image(systemName: "x.circle")
+                    Image(systemName: "x.circle")
+                    Image(systemName: "x.circle")
+                }
+                HStack {
+                    Image(systemName: "x.circle")
+                    Image(systemName: "x.circle")
+                    Image(systemName: "x.circle")
+                }
+            }
             
         }
-        .padding()
     }
 }
 
