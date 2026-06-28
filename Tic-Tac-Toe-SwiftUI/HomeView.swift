@@ -17,39 +17,44 @@ struct HomeView: View {
             }
             .padding()
         }
+        .background(LinearGradient(colors: [.red], startPoint: .bottomLeading, endPoint: .topTrailing))
     }
 }
+
 
 
 struct CellView: View {
     var body: some View {
-        HStack {
+        HStack{
             ZStack {
                 Circle()
+                    .frame( width: 100, height: 100, alignment: .center)
+                    .foregroundStyle(.black)
                 Image(systemName: "x.circle")
                     .resizable()
-                    .frame(width: 100, height: 100, alignment: .center)
+                    .frame( width: 85, height: 85, alignment: .center)
                     .foregroundStyle(.white)
             }
             ZStack {
                 Circle()
+                    .frame( width: 100, height: 100, alignment: .center)
                 Image(systemName: "x.circle")
                     .resizable()
-                    .frame(width: 100, height: 100, alignment: .center)
+                    .frame( width: 85, height: 85, alignment: .center)
                     .foregroundStyle(.white)
             }
             ZStack {
                 Circle()
+                    .frame( width: 100, height: 100, alignment: .center)
                 Image(systemName: "x.circle")
                     .resizable()
-                    .frame(width: 100, height: 100, alignment: .center)
+                    .frame( width: 85, height: 85, alignment: .center)
                     .foregroundStyle(.white)
             }
         }
-        .padding()
     }
-    
 }
+
 
 #Preview {
     HomeView()
