@@ -17,7 +17,7 @@ struct HomeView: View {
                 startPoint: .bottomLeading, endPoint: .topTrailing)
             LazyVGrid(columns: columns, spacing: 20) {
                 ForEach(0..<9, id: \.self ){ index in
-                        CellView()
+                        CellView(onTap: {}, isTic: true)
                 }
             }.padding(.all)
         }
@@ -29,16 +29,22 @@ struct HomeView: View {
 
 
 struct CellView: View {
+    var onTap: () -> Void
+    var isTic: Bool
     var body: some View {
         HStack{
             ZStack {
                 Circle()
                     .frame( width: 110, height: 110, alignment: .center)
                     .foregroundStyle(.black)
-                Image(systemName: "x.circle")
+                Image(systemName: isTic ? "x.circle" : "circle")
+//                Image(systemName: "circle")
                     .resizable()
                     .frame( width: 85, height: 85, alignment: .center)
                     .foregroundStyle(.white)
+                    .onTapGesture {
+                        
+                    }
             }
         }
     }
